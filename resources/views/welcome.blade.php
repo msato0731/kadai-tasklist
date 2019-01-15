@@ -2,8 +2,8 @@
 
 @section('content')
     @if (Auth::check())
-        {{ Auth::user()->name }}
-    @else
+        @include('tasks.index', ['tasks' => $tasks ])
+     @else
         <div class="center jumbotron">
             <div class="text-center">
                 <h1>Welcome to the Tasklist</h1>
